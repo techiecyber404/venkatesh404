@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Venkatesh's cybersecurity portfolio showcasing projects, skills, and experience under TechieCyber404." />
+  <meta property="og:title" content="Venkatesh Kokkiligadda | Cybersecurity Professional" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/00000000?v=4" />
+  <meta property="og:description" content="Cybersecurity projects, blogs, and tools by Venkatesh Kokkiligadda." />
+  <meta property="og:url" content="https://yourwebsite.com" />
+  <meta name="theme-color" content="#b91c1c" />
+  <title>Venkatesh Kokkiligadda | Cybersecurity Professional</title>
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/00000000?v=4" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #000000;
+      --accent: #b91c1c;
+      --bg: #000000;
+      --text: #f5f5f5;
+      --card: #1a1a1a;
+      --card-hover: #252525;
+      --text-muted: #a3a3a3;
+      --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background var(--transition), color var(--transition);
+    }
+    
+    header {
+      background: var(--primary);
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid rgba(185, 28, 28, 0.2);
+    }
+    
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      margin-bottom: 1rem;
+      object-fit: cover;
+      transition: transform var(--transition);
+    }
+    
+    header img:hover {
+      transform: scale(1.05);
+    }
+    
+    header h1 {
+      color: var(--accent);
+      font-size: clamp(2rem, 5vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    header .typing {
+      font-family: 'Fira Code', monospace;
+      color: #f87171;
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      margin-top: 0.5rem;
+      min-height: 24px;
+      font-weight: 500;
+    }
+    
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      background: var(--card);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      transition: all var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .theme-toggle:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+    
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all var(--transition);
+      border: 1px solid rgba(185, 28, 28, 0.1);
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(185, 28, 28, 0.3);
+      background: var(--card-hover);
+    }
+    
+    .card h2 {
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    
+    .card p {
+      margin-bottom: 1rem;
+    }
+    
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color var(--transition);
+      font-weight: 500;
+    }
+    
+    a:hover {
+      color: #f87171;
+      text-decoration: underline;
+    }
+    
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .socials a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .resume-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--accent);
+      color: var(--bg);
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all var(--transition);
+      border: 2px solid transparent;
+    }
+    
+    .resume-button:hover {
+      background-color: transparent;
+      color: var(--accent);
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+    
+    ul {
+      list-style-position: inside;
+      padding-left: 0.5rem;
+    }
+    
+    li {
+      margin-bottom: 0.75rem;
+      padding-left: 0.5rem;
+    }
+    
+    li::marker {
+      color: var(--accent);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      background: var(--card);
+      margin-top: 3rem;
+      border-top: 1px solid rgba(185, 28, 28, 0.2);
+    }
+    
+    .back-to-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    
+    /* Dark mode styles */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #000000;
+        --accent: #b91c1c;
+        --bg: #000000;
+        --text: #f5f5f5;
+        --card: #1a1a1a;
+      }
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        padding: 2rem 1rem;
+      }
+      
+      .theme-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 0.5rem;
+      }
+      
+      .theme-toggle span {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle color theme">
+      <span>Toggle Theme</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
+    <img src="https://avatars.githubusercontent.com/u/00000000?v=4" alt="Venkatesh Kokkiligadda Profile Picture" width="120" height="120" />
+    <h1>Venkatesh Kokkiligadda</h1>
+    <div class="typing" id="typing" aria-live="polite"></div>
+  </header>
+
+  <main>
+    <section>
+      <div class="card" data-aos="fade-up">
+        <h2>About Me</h2>
+        <p>I'm Venkatesh Kokkiligadda, the creator behind <strong>TechieCyber404</strong>. I'm passionate about digital privacy, ethical hacking, and making complex technology accessible to everyone. With a background in cybersecurity, I specialize in identifying vulnerabilities and developing secure systems.</p>
+        <p>When I'm not exploring the digital world, I enjoy philosophy, logical problem-solving, and sharing knowledge through writing and teaching.</p>
+        <a class="resume-button" href="#" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          Download Resume
+        </a>
+      </div>
+
+      <div class="card" data-aos="fade-up">
+        <h2>Projects</h2>
+        <ul>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram Reels Downloader</a> - Python application using Tkinter and yt-dlp to download Instagram reels with metadata preservation.</li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Steganography Tool</a> - Command-line utility to hide files inside images using least significant bit (LSB) technique.</li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">CyberStrive Internship Portal</a> - Secure platform connecting cybersecurity students with internship opportunities.</li>
+        </ul>
+      </div>
+
+      <div class="card" data-aos="fade-up">
+        <h2>Skills</h2>
+        <ul>
+          <li>Ethical Hacking & Penetration Testing</li>
+          <li>Network Security & Vulnerability Assessment</li>
+          <li>Python, Bash, and PowerShell Scripting</li>
+          <li>Digital Forensics & Incident Response</li>
+          <li>Security Awareness Training</li>
+        </ul>
+      </div>
+
+      <div class="card" data-aos="fade-up">
+        <h2>Contact & Socials</h2>
+        <p>Feel free to reach out for collaborations, questions, or just to connect!</p>
+        <div class="socials">
+          <a href="https://instagram.com/techiecyber404" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            Instagram
+          </a>
+          <a href="https://github.com/venkatesh404" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+            GitHub
+          </a>
+          <a href="mailto:venkatesh@example.com" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Email
+          </a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year">2025</span> Venkatesh Kokkiligadda • Built with <span aria-label="love">💻</span> and <span aria-label="coffee">☕</span></p>
+    <a href="#top" class="back-to-top">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 15l-6-6-6 6"/>
+      </svg>
+      Back to top
+    </a>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS animation library
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Typing animation
+    const roles = ["Cybersecurity Professional", "Ethical Hacker", "Tech Educator", "Privacy Advocate", "Problem Solver"];
+    let i = 0, j = 0, current = "", isDeleting = false;
+    let typingSpeed = 100;
+    
+    function type() {
+      const target = document.getElementById("typing");
+      const currentRole = roles[i];
+      
+      if (isDeleting) {
+        current = currentRole.substring(0, j--);
+        typingSpeed = 50;
+      } else {
+        current = currentRole.substring(0, j++);
+        typingSpeed = j % 3 === 0 ? 150 : 100; // Randomize typing speed slightly
+      }
+      
+      target.textContent = current;
+      
+      if (!isDeleting && j === currentRole.length) {
+        isDeleting = true;
+        typingSpeed = 1000; // Pause at end of word
+      } else if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i + 1) % roles.length;
+        typingSpeed = 500; // Pause before next word
+      }
+      
+      setTimeout(type, typingSpeed);
+    }
+    
+    // Start typing animation after page load
+    window.addEventListener('load', () => {
+      setTimeout(type, 1000);
+    });
+
+    // Theme toggle functionality
+    function toggleTheme() {
+      const root = document.documentElement;
+      const isDark = root.style.getPropertyValue('--bg') === '#000000' || 
+                    (!root.style.getPropertyValue('--bg') && 
+                     window.matchMedia('(prefers-color-scheme: dark)').matches);
+      
+      if (isDark) {
+        // Switch to light theme
+        root.style.setProperty('--bg', '#f5f5f5');
+        root.style.setProperty('--text', '#111111');
+        root.style.setProperty('--card', '#ffffff');
+        root.style.setProperty('--card-hover', '#f0f0f0');
+        root.style.setProperty('--primary', '#b91c1c');
+        root.style.setProperty('--accent', '#000000');
+        root.style.setProperty('--text-muted', '#555555');
+        localStorage.setItem('theme', 'light');
+      } else {
+        // Switch to dark theme
+        root.style.setProperty('--bg', '#000000');
+        root.style.setProperty('--text', '#f5f5f5');
+        root.style.setProperty('--card', '#1a1a1a');
+        root.style.setProperty('--card-hover', '#252525');
+        root.style.setProperty('--primary', '#000000');
+        root.style.setProperty('--accent', '#b91c1c');
+        root.style.setProperty('--text-muted', '#a3a3a3');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+    
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      toggleTheme(); // Switch to light if saved
+    }
+  </script>
+</body>
+</html>
